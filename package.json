@@ -1,5 +1,5 @@
 {
-  "name": "hardhat-startup-template",
+  "name": "hardhat-masterchef",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -8,7 +8,7 @@
     "test": "npx hardhat test",
     "test:report-gas": "REPORT_GAS=true npx hardhat test"
   },
-  "author": "Zhang He",
+  "author": "green9016",
   "license": "ISC",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.2",

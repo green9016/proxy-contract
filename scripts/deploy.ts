@@ -14,16 +14,11 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const LogicV1 = await hre.ethers.getContractFactory("LogicV1");
-  const logicV1 = await LogicV1.deploy();
-  await logicV1.deployed();
+  const EverPrinter = await hre.ethers.getContractFactory("EverPrinter");
+  const everPrinter = await EverPrinter.deploy();
+  await everPrinter.deployed();
 
-  const Proxy = await hre.ethers.getContractFactory("Proxy");
-  const proxy = await Proxy.deploy();
-  await proxy.deployed();
-  proxy.setImplementation(logicV1.address);  
-
-  console.log("Proxy deployed to:", proxy.address, logicV1.address);
+  console.log("MasterChef deployed to:", everPrinter.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
